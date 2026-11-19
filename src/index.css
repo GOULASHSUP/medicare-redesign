@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  /* Medicare brand colours */
+  --color-primary: #0c55a2;
+  --color-primary-hover: #094583;
+  --color-primary-light: #eaf2fa;
+}
