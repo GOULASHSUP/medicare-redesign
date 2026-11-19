@@ -82,6 +82,13 @@ export default function NavDropdown({ item }: NavDropdownProps) {
     setActiveSubmenu(null);
   };
 
+  const mainLinkClassName = (open: boolean) =>
+    `flex h-full items-center gap-2 px-3 text-sm font-medium text-zinc-800 transition-colors focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary ${
+      open
+        ? "bg-primary-light text-primary"
+        : "hover:bg-primary-light hover:text-primary"
+    }`;
+
   return (
     <div
       ref={containerRef}
@@ -99,9 +106,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
         <DropdownLink
           href={item.href}
           onClick={closeMenu}
-          className={`flex h-full items-center gap-2 px-4 text-sm font-medium text-white transition-colors focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white ${
-            isOpen ? "bg-white/15" : "hover:bg-white/10"
-          }`}
+          className={mainLinkClassName(isOpen)}
         >
           {item.label}
 
@@ -119,9 +124,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
           onClick={toggleMenu}
           aria-expanded={isOpen}
           aria-controls={menuId}
-          className={`flex h-full items-center gap-2 px-4 text-sm font-medium text-white transition-colors focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white ${
-            isOpen ? "bg-white/15" : "hover:bg-white/10"
-          }`}
+          className={mainLinkClassName(isOpen)}
         >
           {item.label}
 

@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
-import { Menu, X, ChevronDown, CalendarDays, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, CalendarDays, CircleAlert } from "lucide-react";
 import { navigationItems, type NavigationItem } from "../../data/navigation";
 
 // Shared link component supporting internal and external URLs
@@ -235,8 +235,8 @@ export default function MobileNavigation() {
                 onClick={closeMenu}
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary-hover sm:flex-1"
               >
-                <Phone size={18} strokeWidth={1.8} />
-                Kapcsolat
+                <CircleAlert size={18} strokeWidth={1.8} />
+                SÜRGŐSSÉGI CENTRUM
               </Link>
             </div>
           </div>
