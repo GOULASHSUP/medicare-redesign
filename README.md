@@ -1,156 +1,111 @@
-Medicare Website Redesign
+# Medicare Website Redesign
 
-A modern, responsive redesign concept for the Medicare Hungary website, developed as a frontend development assignment.
+A responsive frontend redesign concept for the Hungarian Medicare website, created as a development assignment.
 
-The project focuses on improving the website’s visual presentation, navigation, usability, and responsiveness while maintaining the original Hungarian-language content and service categories.
+The project focuses on clear navigation, accessible interfaces, and a consistent experience across desktop, tablet, and mobile devices. Website content is presented in Hungarian.
 
-Built with React, TypeScript, Vite, and Tailwind CSS.
+> **Note:** This is a demonstration project, not an official Medicare website.
 
-Tech Stack
+## Tech Stack
 
-- React — Component-based user interface
-- TypeScript — Type-safe frontend development
-- Vite — Development server and production build tooling
-- Tailwind CSS v4 — Utility-first styling and responsive layouts
-- React Router — Client-side navigation and routing
-- Lucide React — Interface icons
-- React Icons — Social media icons
-- Vercel — Hosting and deployment
+- **React** and **TypeScript** — component-based frontend development
+- **Vite** — development server and production builds
+- **Tailwind CSS v4** — styling and responsive layouts
+- **React Router** — client-side routing
+- **Lucide React** and **React Icons** — interface and social icons
+- **Vercel** — deployment
 
-Features
+## Features
 
-Responsive Design
-
-The website is designed for desktop, tablet, and mobile devices, with responsive layouts throughout.
-
-Navigation
-
-- Responsive header and navigation bar
-- Desktop dropdown menus
-- Mobile navigation with expandable categories
-- Dedicated routes for navigation items and services
-- Automatic scroll-to-top behaviour when navigating between pages
-
-Homepage
-
-The redesigned homepage includes:
-
-- Hero section with service navigation cards
-- Featured healthcare services
+- Responsive header with desktop dropdown navigation and mobile accordions
+- Hero section with quick links to major healthcare categories
+- Featured healthcare service cards
 - Interactive service search with Hungarian accent-insensitive matching
-- Hospital showcase carousel
-- News, events, and offers section
-- Newsletter subscription interface
-- Responsive footer with contact information and useful links
+- Hospital showcase carousel with navigation controls
+- News and offers section
+- Newsletter subscription interface (frontend demonstration only)
+- Responsive footer with contact details, useful links, and related websites
+- Dedicated URLs for navigation items, services, and news articles
+- Temporary Hungarian-language placeholder pages for unfinished routes
+- Scroll-to-top behavior when navigating between routes
+- Hungarian-language metadata and a custom favicon
 
-Service Search
+## Project Structure
 
-The interactive search component allows users to find healthcare services and website sections.
-
-Features include:
-
-- Real-time filtering
-- Accent-insensitive Hungarian text matching
-- Navigation to relevant pages
-- Responsive search results
-
-Routing and Development Pages
-
-React Router handles internal navigation without full page reloads.
-
-Individual navigation items, services, and news articles have dedicated URLs.
-
-Pages that have not yet been implemented display a temporary Hungarian-language development placeholder with a link back to the homepage.
-
-SEO and Accessibility
-
-The project includes:
-
-- Hungarian-language page metadata
-- Custom favicon
-- Semantic HTML structure
-- Descriptive image alternative text
-- Accessible navigation controls and labels
-- Keyboard-accessible interactive elements
-
-Project Structure
-
+```text
 medicare-redesign/
 ├── public/
-│ └── favicon.svg
+│   └── favicon.svg
 ├── src/
-│ ├── assets/
-│ │ └── images/
-│ ├── components/
-│ │ ├── home/
-│ │ └── layout/
-│ ├── data/
-│ ├── layouts/
-│ ├── pages/
-│ ├── App.tsx
-│ ├── index.css
-│ └── main.tsx
+│   ├── assets/
+│   │   └── images/
+│   ├── components/
+│   │   ├── home/
+│   │   └── layout/
+│   ├── data/
+│   ├── layouts/
+│   ├── pages/
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
 ├── index.html
 ├── package.json
 ├── vercel.json
 └── README.md
+```
 
-Getting Started
+## Getting Started
 
-Prerequisites
+### Prerequisites
 
 - Node.js
 - npm
 
-Installation
+### Installation
 
-Clone the repository:
+Clone the repository (replace the placeholder with the repository's Git URL):
 
+```bash
 git clone <repository-url>
 cd medicare-redesign
+```
 
 Install dependencies:
 
+```bash
 npm install
+```
 
-Start the development server:
+Start the local development server:
 
+```bash
 npm run dev
+```
 
-Open the local URL displayed in the terminal.
+Open the local URL shown in the terminal.
 
-Production Build
+### Production Build
 
-To create a production build:
-
+```bash
 npm run build
+```
 
-This runs TypeScript compilation and generates an optimized production bundle in the dist/ directory.
+This runs TypeScript checks and creates the production build in `dist/`.
 
-To preview the production build locally:
+Preview the production build locally:
 
+```bash
 npm run preview
+```
 
-Deployment
+## Deployment
 
-The project is configured for deployment on Vercel.
+The project is configured for Vercel. The `vercel.json` rewrite serves the application entry point for client-side routes, allowing direct visits and refreshes on routes handled by React Router.
 
-The vercel.json file provides a fallback to index.html, allowing React Router to handle client-side routes when users directly visit or refresh a page.
+## Project Status
 
-Changes pushed to the connected GitHub repository can trigger automatic Vercel deployments.
+The homepage and its primary interactive components are implemented. Other routes currently display development placeholders rather than finished pages. The newsletter interface is not connected to a subscription service.
 
-Project Status
+## Disclaimer
 
-This project is a frontend redesign concept and is not an official Medicare production website.
-
-The homepage and its primary interactive components have been implemented.
-
-Additional pages currently display development placeholders. Features such as newsletter subscriptions are interface demonstrations and are not connected to production backend services.
-
-Disclaimer
-
-This project was created for demonstration and evaluation purposes.
-
-Medicare names, trademarks, and related brand elements belong to their respective owners.
-
-This project is not affiliated with or endorsed by Medicare.
+This project was created for demonstration and evaluation purposes. Medicare names, trademarks, and brand elements belong to their respective owners. This project is not affiliated with or endorsed by Medicare.
