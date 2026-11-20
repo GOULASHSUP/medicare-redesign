@@ -38,7 +38,7 @@ const backgroundIcons = [
 export default function ServiceSearchSection() {
   return (
     <section
-      className="relative isolate overflow-hidden bg-linear-to-b from-primary-light/50 via-primary-light/30 to-white py-20 lg:py-28"
+      className="relative isolate overflow-hidden bg-linear-to-b from-primary-light/50 via-primary-light/30 to-white pt-20 pb-10 lg:pt-28 lg:pb-12"
       aria-labelledby="service-search-heading"
     >
       {/* Decorative Background Icons */}
