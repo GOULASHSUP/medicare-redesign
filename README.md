@@ -1,75 +1,156 @@
-# React + TypeScript + Vite
+Medicare Website Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive redesign concept for the Medicare Hungary website, developed as a frontend development assignment.
 
-Currently, two official plugins are available:
+The project focuses on improving the website’s visual presentation, navigation, usability, and responsiveness while maintaining the original Hungarian-language content and service categories.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built with React, TypeScript, Vite, and Tailwind CSS.
 
-## React Compiler
+Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React — Component-based user interface
+- TypeScript — Type-safe frontend development
+- Vite — Development server and production build tooling
+- Tailwind CSS v4 — Utility-first styling and responsive layouts
+- React Router — Client-side navigation and routing
+- Lucide React — Interface icons
+- React Icons — Social media icons
+- Vercel — Hosting and deployment
 
-## Expanding the ESLint configuration
+Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Responsive Design
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The website is designed for desktop, tablet, and mobile devices, with responsive layouts throughout.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Navigation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Responsive header and navigation bar
+- Desktop dropdown menus
+- Mobile navigation with expandable categories
+- Dedicated routes for navigation items and services
+- Automatic scroll-to-top behaviour when navigating between pages
 
-```
+Homepage
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+The redesigned homepage includes:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Hero section with service navigation cards
+- Featured healthcare services
+- Interactive service search with Hungarian accent-insensitive matching
+- Hospital showcase carousel
+- News, events, and offers section
+- Newsletter subscription interface
+- Responsive footer with contact information and useful links
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Service Search
 
-```
+The interactive search component allows users to find healthcare services and website sections.
+
+Features include:
+
+- Real-time filtering
+- Accent-insensitive Hungarian text matching
+- Navigation to relevant pages
+- Responsive search results
+
+Routing and Development Pages
+
+React Router handles internal navigation without full page reloads.
+
+Individual navigation items, services, and news articles have dedicated URLs.
+
+Pages that have not yet been implemented display a temporary Hungarian-language development placeholder with a link back to the homepage.
+
+SEO and Accessibility
+
+The project includes:
+
+- Hungarian-language page metadata
+- Custom favicon
+- Semantic HTML structure
+- Descriptive image alternative text
+- Accessible navigation controls and labels
+- Keyboard-accessible interactive elements
+
+Project Structure
+
+medicare-redesign/
+├── public/
+│ └── favicon.svg
+├── src/
+│ ├── assets/
+│ │ └── images/
+│ ├── components/
+│ │ ├── home/
+│ │ └── layout/
+│ ├── data/
+│ ├── layouts/
+│ ├── pages/
+│ ├── App.tsx
+│ ├── index.css
+│ └── main.tsx
+├── index.html
+├── package.json
+├── vercel.json
+└── README.md
+
+Getting Started
+
+Prerequisites
+
+- Node.js
+- npm
+
+Installation
+
+Clone the repository:
+
+git clone <repository-url>
+cd medicare-redesign
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Open the local URL displayed in the terminal.
+
+Production Build
+
+To create a production build:
+
+npm run build
+
+This runs TypeScript compilation and generates an optimized production bundle in the dist/ directory.
+
+To preview the production build locally:
+
+npm run preview
+
+Deployment
+
+The project is configured for deployment on Vercel.
+
+The vercel.json file provides a fallback to index.html, allowing React Router to handle client-side routes when users directly visit or refresh a page.
+
+Changes pushed to the connected GitHub repository can trigger automatic Vercel deployments.
+
+Project Status
+
+This project is a frontend redesign concept and is not an official Medicare production website.
+
+The homepage and its primary interactive components have been implemented.
+
+Additional pages currently display development placeholders. Features such as newsletter subscriptions are interface demonstrations and are not connected to production backend services.
+
+Disclaimer
+
+This project was created for demonstration and evaluation purposes.
+
+Medicare names, trademarks, and related brand elements belong to their respective owners.
+
+This project is not affiliated with or endorsed by Medicare.
