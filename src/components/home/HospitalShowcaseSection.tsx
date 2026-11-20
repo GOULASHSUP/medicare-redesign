@@ -22,7 +22,7 @@ export default function HospitalShowcaseSection() {
 
   return (
     <section
-      className="bg-white pt-10 pb-20 lg:pt-12 lg:pb-28"
+      className="bg-white pt-10 pb-10 lg:pt-12 lg:pb-12"
       aria-label="Medicare Magánkórház és műtéti ellátás"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -114,7 +114,7 @@ export default function HospitalShowcaseSection() {
                   type="button"
                   onClick={goToPrevious}
                   aria-label="Előző dia"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 transition-colors hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-primary"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-colors hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   <ArrowLeft size={18} strokeWidth={1.8} />
                 </button>
@@ -123,7 +123,7 @@ export default function HospitalShowcaseSection() {
                   type="button"
                   onClick={goToNext}
                   aria-label="Következő dia"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 transition-colors hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-primary"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-colors hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   <ArrowRight size={18} strokeWidth={1.8} />
                 </button>
