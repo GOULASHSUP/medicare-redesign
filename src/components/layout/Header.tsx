@@ -5,15 +5,14 @@ import NavDropdown from "./NavDropdown";
 import { navigationItems } from "../../data/navigation";
 
 export default function Header() {
-  // TODO: Replace with verified Medicare contact details.
   const phoneNumber = "+36 1 465 3131";
   const phoneHref = "+3614653131";
   const emailAddress = "korhaz@medicare-group.hu";
 
   return (
-    <header className="relative z-50 w-full">
-      {/* Top Bar */}
-      <div className="bg-primary">
+    <>
+      {/* Top Contact Bar - Scrolls Away */}
+      <div className="relative z-50 w-full bg-primary">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
           {/* Desktop Top Bar */}
           <div className="hidden min-h-12 items-center justify-between gap-6 xl:flex">
@@ -79,8 +78,8 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Navigation Bar */}
-      <div className="border-b border-zinc-200 bg-zinc-50">
+      {/* Main Navigation Bar - Sticky */}
+      <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-zinc-50">
         <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-5 px-6 lg:px-8">
           {/* Medicare Logo */}
           <Link
@@ -123,7 +122,7 @@ export default function Header() {
           {/* Mobile Navigation */}
           <MobileNavigation />
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
