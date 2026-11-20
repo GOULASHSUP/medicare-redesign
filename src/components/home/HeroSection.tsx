@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import {
   HeartPulse,
   Stethoscope,
@@ -12,25 +13,25 @@ const heroNavigation = [
   {
     title: "Műtétek",
     description: "Ismerje meg széles körű műtéti szolgáltatásainkat.",
-    href: "/",
+    href: "/mutetek",
     icon: HeartPulse,
   },
   {
     title: "Vizsgálatok",
     description: "Szakrendelések és diagnosztikai vizsgálatok.",
-    href: "/",
+    href: "/vizsgalatok",
     icon: Stethoscope,
   },
   {
     title: "Orvosaink",
     description: "Találja meg az Önnek megfelelő szakorvost.",
-    href: "/",
+    href: "/orvosok",
     icon: UsersRound,
   },
   {
     title: "Áraink",
     description: "Tekintse meg szolgáltatásaink árait.",
-    href: "/",
+    href: "/arak",
     icon: ClipboardList,
   },
 ];
@@ -75,13 +76,13 @@ export default function HeroSection() {
           </p>
 
           {/* Primary Action */}
-          <a
-            href="#"
+          <Link
+            to="/online-idopontfoglalas"
             className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             Online időpontfoglalás
             <ArrowRight size={18} strokeWidth={1.8} />
-          </a>
+          </Link>
         </div>
 
         {/* Hero Navigation Cards */}

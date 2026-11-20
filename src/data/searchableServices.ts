@@ -14,7 +14,7 @@ const featuredServices: SearchableService[] = [
     id: "alex-multiplex",
     title: "ALEX multiplex allergiateszt",
     description: "Átfogó allergiavizsgálat egyetlen vérvételből.",
-    href: "/",
+    href: "/alex-multiplex-allergiateszt",
     keywords: [
       "allergia",
       "allergiavizsgálat",
@@ -27,14 +27,14 @@ const featuredServices: SearchableService[] = [
     id: "mutetek",
     title: "Műtétek és fekvőbeteg-ellátás",
     description: "Sebészeti beavatkozások és kórházi ellátás.",
-    href: "/",
+    href: "/mutetek",
     keywords: ["műtét", "sebészet", "sebész", "kórház", "fekvőbeteg"],
   },
   {
     id: "fox-286",
     title: "FOX 286 ételintolerancia panel",
     description: "Ételintolerancia-vizsgálat számos élelmiszerre.",
-    href: "/",
+    href: "/fox-286-etelintolerancia-panel",
     keywords: [
       "ételintolerancia",
       "ételérzékenység",
@@ -47,7 +47,7 @@ const featuredServices: SearchableService[] = [
     id: "telemedicina",
     title: "Telemedicina",
     description: "Orvosi konzultáció kényelmesen, online.",
-    href: "/",
+    href: "/telemedicina",
     keywords: [
       "online",
       "telemedicina",
@@ -60,7 +60,7 @@ const featuredServices: SearchableService[] = [
     id: "start",
     title: "Start állapotfelmérő csomag",
     description: "Átfogó egészségügyi állapotfelmérés.",
-    href: "/",
+    href: "/start-allapotfelmero-csomag",
     keywords: [
       "szűrés",
       "szűrővizsgálat",
@@ -73,14 +73,14 @@ const featuredServices: SearchableService[] = [
     id: "obezitologia",
     title: "Obezitológiai tanácsadás",
     description: "Szakértői segítség a testsúlykezelésben.",
-    href: "/",
+    href: "/obezitologiai-tanacsadas",
     keywords: ["obezitológia", "elhízás", "testsúly", "fogyás", "túlsúly"],
   },
   {
     id: "meddoseg",
     title: "Meddőségi tanácsadás",
     description: "Szakértői támogatás a családtervezéshez.",
-    href: "/",
+    href: "/meddosegi-tanacsadas",
     keywords: ["meddőség", "termékenység", "gyermekvállalás", "családtervezés"],
   },
 ];

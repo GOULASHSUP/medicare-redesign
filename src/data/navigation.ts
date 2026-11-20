@@ -7,241 +7,241 @@ export interface NavigationItem {
 export const navigationItems: NavigationItem[] = [
   {
     label: "Műtétek",
-    href: "/",
+    href: "/mutetek",
     children: [
       {
         label: "Daganatsebészeti műtétek",
-        href: "/",
+        href: "/mutetek/daganatsebeszeti-mutetek",
       },
       {
         label: "Érsebészeti műtét",
-        href: "/",
+        href: "/mutetek/ersebeszeti-mutet",
       },
       {
         label: "Fül-orr-gégészeti műtétek",
-        href: "/",
+        href: "/mutetek/ful-orr-gegeszeti-mutetek",
       },
       {
         label: "Gerincsebészeti műtétek",
-        href: "/",
+        href: "/mutetek/gerincsebeszeti-mutetek",
       },
       {
         label: "Gyermeksebészet",
-        href: "/",
+        href: "/mutetek/gyermeksebeszet",
       },
       {
         label: "Kéz- és lábsebészeti műtétek",
-        href: "/",
+        href: "/mutetek/kez-es-labsebeszeti-mutetek",
       },
       {
         label: "Nőgyógyászati műtétek",
-        href: "/",
+        href: "/mutetek/nogyogyaszati-mutetek",
       },
       {
         label: "Ortopédiai műtétek",
-        href: "/",
+        href: "/mutetek/ortopediai-mutetek",
       },
       {
         label: "Sebészeti műtétek",
-        href: "/",
+        href: "/mutetek/sebeszeti-mutetek",
       },
       {
         label: "Szemészeti műtétek",
-        href: "/",
+        href: "/mutetek/szemeszeti-mutetek",
       },
       {
         label: "Urológiai műtétek",
-        href: "/",
+        href: "/mutetek/urologiai-mutetek",
       },
       {
         label: "Tartózkodás a kórházban",
-        href: "/",
+        href: "/mutetek/tartozkodas-a-korhazban",
       },
       {
         label: "Medicare Optika",
-        href: "/",
+        href: "/medicare-optika",
       },
     ],
   },
   {
     label: "Vizsgálatok",
-    href: "/",
+    href: "/vizsgalatok",
     children: [
       {
         label: "PCR és IgG ellenanyag koronavírus tesztek",
-        href: "/",
+        href: "/vizsgalatok/pcr-es-igg-koronavirus-tesztek",
       },
       {
         label: "Betegszállítás",
-        href: "/",
+        href: "/vizsgalatok/betegszallitas",
       },
       {
         label: "Diagnosztika",
-        href: "/",
+        href: "/vizsgalatok/diagnosztika",
       },
       {
         label: "Laborvizsgálatok",
-        href: "/",
+        href: "/vizsgalatok/laborvizsgalatok",
       },
       {
         label: "Szakrendelések",
-        href: "/",
+        href: "/vizsgalatok/szakrendelesek",
       },
       {
         label: "Szakvizsgálatok",
-        href: "/",
+        href: "/vizsgalatok/szakvizsgalatok",
       },
       {
         label: "Vizsgálati csomagok",
-        href: "/",
+        href: "/vizsgalatok/vizsgalati-csomagok",
       },
     ],
   },
   {
     label: "Szolgáltatóhelyek",
-    href: "/",
+    href: "/szolgaltatohelyek",
     children: [
       {
         label: "Budapesti Klinikák",
-        href: "/",
+        href: "/szolgaltatohelyek/budapesti-klinikak",
       },
       {
         label: "Esztétikai Klinika",
-        href: "/",
+        href: "/szolgaltatohelyek/esztetikai-klinika",
       },
       {
         label: "Fogászatok",
-        href: "/",
+        href: "/szolgaltatohelyek/fogaszatok",
       },
       {
         label: "Gyógyszertárak",
-        href: "/",
+        href: "/szolgaltatohelyek/gyogyszertarak",
       },
       {
         label: "Laborpontok",
-        href: "/",
+        href: "/szolgaltatohelyek/laborpontok",
       },
       {
         label: "Medicare Fitness",
-        href: "/",
+        href: "/szolgaltatohelyek/medicare-fitness",
       },
       {
         label: "Medicare Optika",
-        href: "/",
+        href: "/medicare-optika",
       },
       {
         label: "Medicare Szülészet",
-        href: "/",
+        href: "/szolgaltatohelyek/medicare-szuleszet",
       },
       {
         label: "Medicare Ügyeleti Centrum",
-        href: "/",
+        href: "/szolgaltatohelyek/medicare-ugyeleti-centrum",
       },
       {
         label: "Vidéki Klinikák",
-        href: "/",
+        href: "/szolgaltatohelyek/videki-klinikak",
       },
     ],
   },
   {
     label: "Árak",
-    href: "/",
+    href: "/arak",
     children: [
       {
         label: "Szülészeti árlista",
-        href: "/",
+        href: "/arak/szuleszeti-arlista",
       },
       {
         label: "Esztétikai kezelések árlista",
-        href: "/",
+        href: "/arak/esztetikai-kezelesek-arlista",
       },
       {
         label: "Szakrendelések árlista",
-        href: "/",
+        href: "/arak/szakrendelesek-arlista",
       },
       {
         label: "Műtéti árlista",
-        href: "/",
+        href: "/arak/muteti-arlista",
       },
       {
         label: "Laborvizsgálati árlista",
-        href: "/",
+        href: "/arak/laborvizsgalati-arlista",
       },
       {
         label: "Diagnosztika árlista",
-        href: "/",
+        href: "/arak/diagnosztika-arlista",
       },
     ],
   },
   {
     label: "Orvosok",
-    href: "/",
+    href: "/orvosok",
   },
   {
     label: "Rólunk",
-    href: "/",
+    href: "/rolunk",
     children: [
       {
         label: "Vállalati megoldások",
-        href: "/",
+        href: "/rolunk/vallalati-megoldasok",
       },
       {
         label: "Időpontlemondási és -módosítási szabályzat",
-        href: "/",
+        href: "/rolunk/idopontlemondasi-es-modositasi-szabalyzat",
       },
       {
         label: "Páciensvélemények",
-        href: "/",
+        href: "/rolunk/paciensvelemenyek",
       },
       {
         label: "Karrier",
-        href: "/",
+        href: "/rolunk/karrier",
       },
       {
         label: "Galéria",
-        href: "/",
+        href: "/rolunk/galeria",
       },
       {
         label: "Virtuális túra",
-        href: "/",
+        href: "/rolunk/virtualis-tura",
       },
       {
         label: "Blog",
-        href: "/",
+        href: "/rolunk/blog",
       },
     ],
   },
   {
     label: "Kapcsolat",
-    href: "/",
+    href: "/kapcsolat",
     children: [
       {
         label: "Hasznos tudnivalók",
-        href: "/",
+        href: "/kapcsolat/hasznos-tudnivalok",
       },
     ],
   },
   {
     label: "Fitness-wellness",
-    href: "/",
+    href: "/fitness-wellness",
     children: [
       {
         label: "LIFE1 FITNESS powered by Medicare",
-        href: "/",
+        href: "/fitness-wellness/life1-fitness",
       },
     ],
   },
   {
     label: "Webshop",
-    href: "/",
+    href: "/webshop",
     children: [
       {
         label: "Medicare webshop",
-        href: "/",
+        href: "/webshop/medicare-webshop",
       },
       {
         label: "Optika webshop",
-        href: "/",
+        href: "/webshop/optika-webshop",
       },
     ],
   },

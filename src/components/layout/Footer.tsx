@@ -4,14 +4,14 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import NewsletterForm from "./NewsletterForm";
 
 const usefulLinks = [
-  { label: "Műtétek", href: "/" },
-  { label: "Szakrendelések", href: "/" },
-  { label: "Diagnosztika", href: "/" },
-  { label: "Laborvizsgálatok", href: "/" },
-  { label: "Orvosok", href: "/" },
-  { label: "Árak", href: "/" },
-  { label: "Egészség A–Z", href: "/" },
-  { label: "Kapcsolat", href: "/" },
+  { label: "Műtétek", href: "/mutetek" },
+  { label: "Szakrendelések", href: "/vizsgalatok/szakrendelesek" },
+  { label: "Diagnosztika", href: "/vizsgalatok/diagnosztika" },
+  { label: "Laborvizsgálatok", href: "/vizsgalatok/laborvizsgalatok" },
+  { label: "Orvosok", href: "/orvosok" },
+  { label: "Árak", href: "/arak" },
+  { label: "Egészség A–Z", href: "/egeszseg-a-z" },
+  { label: "Kapcsolat", href: "/kapcsolat" },
 ];
 
 const externalWebsites = [
@@ -25,9 +25,9 @@ const externalWebsites = [
 ];
 
 const legalLinks = [
-  { label: "Adatkezelési tájékoztató", href: "/" },
-  { label: "Betegjogi tájékoztató", href: "/" },
-  { label: "Privacy Policy", href: "/" },
+  { label: "Adatkezelési tájékoztató", href: "/adatkezelesi-tajekoztato" },
+  { label: "Betegjogi tájékoztató", href: "/betegjogi-tajekoztato" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
   {
     label: "Magyar Nemzeti Bank – Pénzügyi Navigátor",
     href: "https://www.mnb.hu/fogyasztovedelem",

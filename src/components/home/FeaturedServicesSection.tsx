@@ -16,42 +16,42 @@ const featuredServices = [
     description:
       "Konzultáljon szakorvosainkkal kényelmesen, akár otthonából is, online videókonzultáció keretében.",
     image: telemedicinaImage,
-    href: "/",
+    href: "/telemedicina",
   },
   {
     title: "ALEX multiplex allergiateszt",
     description:
       "Átfogó allergiavizsgálat, amely egyetlen vérmintából akár 295 allergén vizsgálatát teszi lehetővé.",
     image: alexImage,
-    href: "/",
+    href: "/alex-multiplex-allergiateszt",
   },
   {
     title: "Start állapotfelmérő csomag",
     description:
       "Komplex egészségügyi állapotfelmérés belgyógyászati vizsgálattal, laborvizsgálatokkal és EKG-val.",
     image: startImage,
-    href: "/",
+    href: "/start-allapotfelmero-csomag",
   },
   {
     title: "FOX 286 ételintolerancia panel",
     description:
       "Ételintolerancia-vizsgálat, amely segíthet azonosítani a panaszokat kiváltó élelmiszereket.",
     image: foxImage,
-    href: "/",
+    href: "/fox-286-etelintolerancia-panel",
   },
   {
     title: "Obezitológiai tanácsadás",
     description:
       "Szakorvosi támogatás a testsúlyproblémák kivizsgálásában és a személyre szabott kezelés megtervezésében.",
     image: obezitologiaImage,
-    href: "/",
+    href: "/obezitologiai-tanacsadas",
   },
   {
     title: "Meddőségi tanácsadás",
     description:
       "Szakértői segítség a termékenységi problémák feltárásában és a lehetséges további lépések meghatározásában.",
     image: meddosegiImage,
-    href: "/",
+    href: "/meddosegi-tanacsadas",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function FeaturedServicesSection() {
         {/* View More Button */}
         <div className="mt-12 flex justify-center">
           <Link
-            to="/"
+            to="/szolgaltatasok"
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary px-6 py-3.5 text-sm font-semibold text-primary transition-colors hover:bg-primary-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             További szolgáltatások

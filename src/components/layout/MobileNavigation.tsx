@@ -221,17 +221,17 @@ export default function MobileNavigation() {
 
             {/* Mobile Action Buttons */}
             <div className="mt-6 flex flex-col gap-3 px-2 pb-4 sm:flex-row">
-              <a
-                href="#"
+              <Link
+                to="/online-idopontfoglalas"
                 onClick={closeMenu}
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary px-5 py-3 text-center text-sm font-semibold text-primary transition-colors hover:bg-primary-light sm:flex-1"
               >
                 <CalendarDays size={18} strokeWidth={1.8} />
                 Online időpontfoglalás
-              </a>
+              </Link>
 
               <Link
-                to="/"
+                to="/surgossegi-centrum"
                 onClick={closeMenu}
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary-hover sm:flex-1"
               >

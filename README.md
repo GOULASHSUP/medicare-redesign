@@ -1,75 +1,111 @@
-# React + TypeScript + Vite
+# Medicare Website Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive frontend redesign concept for the Hungarian Medicare website, created as a development assignment.
 
-Currently, two official plugins are available:
+The project focuses on clear navigation, accessible interfaces, and a consistent experience across desktop, tablet, and mobile devices. Website content is presented in Hungarian.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> **Note:** This is a demonstration project, not an official Medicare website.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** and **TypeScript** — component-based frontend development
+- **Vite** — development server and production builds
+- **Tailwind CSS v4** — styling and responsive layouts
+- **React Router** — client-side routing
+- **Lucide React** and **React Icons** — interface and social icons
+- **Vercel** — deployment
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive header with desktop dropdown navigation and mobile accordions
+- Hero section with quick links to major healthcare categories
+- Featured healthcare service cards
+- Interactive service search with Hungarian accent-insensitive matching
+- Hospital showcase carousel with navigation controls
+- News and offers section
+- Newsletter subscription interface (frontend demonstration only)
+- Responsive footer with contact details, useful links, and related websites
+- Dedicated URLs for navigation items, services, and news articles
+- Temporary Hungarian-language placeholder pages for unfinished routes
+- Scroll-to-top behavior when navigating between routes
+- Hungarian-language metadata and a custom favicon
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+medicare-redesign/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   ├── components/
+│   │   ├── home/
+│   │   └── layout/
+│   ├── data/
+│   ├── layouts/
+│   ├── pages/
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── vercel.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js
+- npm
 
+### Installation
+
+Clone the repository (replace the placeholder with the repository's Git URL):
+
+```bash
+git clone <repository-url>
+cd medicare-redesign
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal.
+
+### Production Build
+
+```bash
+npm run build
+```
+
+This runs TypeScript checks and creates the production build in `dist/`.
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+The project is configured for Vercel. The `vercel.json` rewrite serves the application entry point for client-side routes, allowing direct visits and refreshes on routes handled by React Router.
+
+## Project Status
+
+The homepage and its primary interactive components are implemented. Other routes currently display development placeholders rather than finished pages. The newsletter interface is not connected to a subscription service.
+
+## Disclaimer
+
+This project was created for demonstration and evaluation purposes. Medicare names, trademarks, and brand elements belong to their respective owners. This project is not affiliated with or endorsed by Medicare.

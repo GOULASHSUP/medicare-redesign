@@ -30,12 +30,12 @@ export const hospitalShowcaseSlides: HospitalShowcaseSlide[] = [
     buttons: [
       {
         label: "Bővebben a kórházról",
-        href: "/",
+        href: "/rolunk/medicare-magankorhaz",
         variant: "primary",
       },
       {
         label: "Megnézem a kórházat",
-        href: "/",
+        href: "/rolunk/virtualis-tura",
         variant: "secondary",
       },
     ],
@@ -53,7 +53,7 @@ export const hospitalShowcaseSlides: HospitalShowcaseSlide[] = [
     buttons: [
       {
         label: "Műtéti megoldások",
-        href: "/",
+        href: "/mutetek",
         variant: "primary",
       },
     ],
@@ -71,7 +71,7 @@ export const hospitalShowcaseSlides: HospitalShowcaseSlide[] = [
     buttons: [
       {
         label: "Vizsgálatok megtekintése",
-        href: "/",
+        href: "/vizsgalatok",
         variant: "primary",
       },
     ],
