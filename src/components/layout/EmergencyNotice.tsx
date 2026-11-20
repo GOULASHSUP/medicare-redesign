@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import { ChevronLeft, X } from "lucide-react";
 
 export default function EmergencyNotice() {
@@ -25,7 +26,13 @@ export default function EmergencyNotice() {
 
         {/* Notice Text */}
         <p className="text-xs font-semibold leading-snug sm:text-sm">
-          Sürgősségi Centrumunk hétvégén is nyitva tart!
+          <Link
+            to="/surgossegi-centrum"
+            className="underline decoration-white/70 underline-offset-3 transition-colors hover:text-white/80"
+          >
+            Sürgősségi Centrumunk
+          </Link>{" "}
+          hétvégén is nyitva tart!
         </p>
       </div>
 

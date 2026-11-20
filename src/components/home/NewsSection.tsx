@@ -89,7 +89,7 @@ export default function NewsSection() {
           </div>
 
           <Link
-            to="/"
+            to="/aktualitasok"
             className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-hover"
           >
             Minden aktualitás

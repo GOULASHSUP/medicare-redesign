@@ -21,7 +21,7 @@ export const newsItems: NewsItem[] = [
       "Ismerje meg szülészeti szolgáltatásainkat, szakembereinket és a Medicare által kínált lehetőségeket.",
     image: maternityImage,
     imageAlt: "Szülészeti ellátás a Medicare-nél",
-    href: "/",
+    href: "/aktualitasok/szuleszeti-nyilt-napok",
   },
   {
     id: "special-offers",
@@ -31,7 +31,7 @@ export const newsItems: NewsItem[] = [
       "Fedezze fel aktuális szolgáltatásainkat és egészségügyi ajánlatainkat.",
     image: offersImage,
     imageAlt: "Egészségügyi szolgáltatások és ajánlatok",
-    href: "/",
+    href: "/aktualitasok/aktualis-ajanlatok",
   },
   {
     id: "health-advice",
@@ -41,6 +41,6 @@ export const newsItems: NewsItem[] = [
       "Olvassa el szakértőink egészségmegőrzéssel és megelőzéssel kapcsolatos tanácsait.",
     image: healthAdviceImage,
     imageAlt: "Orvosi konzultáció a Medicare-nél",
-    href: "/",
+    href: "/aktualitasok/egeszsegmegorzesi-tanacsok",
   },
 ];
