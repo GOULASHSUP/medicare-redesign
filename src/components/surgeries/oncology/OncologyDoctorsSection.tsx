@@ -21,7 +21,7 @@ export default function OncologyDoctorsSection() {
 
   return (
     <section
-      className="bg-white py-16 sm:py-20"
+      className="section-spacing bg-white"
       aria-labelledby="oncology-doctors-heading"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -32,7 +32,7 @@ export default function OncologyDoctorsSection() {
             className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl"
           >
             Ismerje meg{" "}
-            <span className="text-primary">daganatsebészeinket</span>
+            <span className="text-primary">daganatsebészeinket!</span>
           </h2>
 
           <p className="mt-5 text-base leading-relaxed text-zinc-600 sm:text-lg">
@@ -85,7 +85,7 @@ export default function OncologyDoctorsSection() {
         </div>
 
         {/* Carousel Navigation */}
-        <div className="mt-8 flex items-center gap-5 border-t border-zinc-200 pt-6">
+        <div className="mt-6 flex items-center gap-5">
           {/* Pagination Dots */}
           <div className="flex items-center gap-2">
             {oncologyDoctors.map((doctor, index) => (

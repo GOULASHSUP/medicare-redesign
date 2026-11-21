@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, MailOpen } from "lucide-react";
 
 export default function NewsletterForm() {
   const [name, setName] = useState("");
@@ -15,9 +15,57 @@ export default function NewsletterForm() {
   }
 
   return (
-    <div className="bg-primary-light">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-        {/* Heading */}
+    <div className="relative isolate overflow-hidden bg-primary-light">
+      {/* Decorative Email Icons */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+        aria-hidden="true"
+      >
+        {/* Top Left */}
+        <Mail
+          size={76}
+          strokeWidth={1}
+          className="absolute top-[12%] left-[5%] -rotate-18 text-[#D9E7F5]"
+        />
+
+        {/* Middle Left */}
+        <MailOpen
+          size={48}
+          strokeWidth={1}
+          className="absolute top-[58%] left-[12%] rotate-14 text-[#D9E7F5]"
+        />
+
+        {/* Bottom Left */}
+        <Mail
+          size={36}
+          strokeWidth={1.2}
+          className="absolute bottom-[8%] left-[3%] rotate-20 text-[#D9E7F5]"
+        />
+
+        {/* Top Right */}
+        <MailOpen
+          size={70}
+          strokeWidth={1}
+          className="absolute top-[10%] right-[6%] rotate-15 text-[#D9E7F5]"
+        />
+
+        {/* Middle Right */}
+        <Mail
+          size={46}
+          strokeWidth={1}
+          className="absolute top-[52%] right-[13%] -rotate-12 text-[#D9E7F5]"
+        />
+
+        {/* Bottom Right */}
+        <MailOpen
+          size={38}
+          strokeWidth={1.2}
+          className="absolute right-[4%] bottom-[8%] -rotate-20 text-[#D9E7F5]"
+        />
+      </div>
+
+      {/* Newsletter Content */}
+      <div className="section-spacing relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary shadow-sm">
             <Mail size={24} strokeWidth={1.7} aria-hidden="true" />

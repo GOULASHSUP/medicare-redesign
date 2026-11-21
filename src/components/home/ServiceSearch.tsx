@@ -29,7 +29,6 @@ export default function ServiceSearch() {
   const animationTimeoutRef = useRef<number | null>(null);
   const resumeTimeoutRef = useRef<number | null>(null);
 
-  // Detect reduced-motion preference
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -46,7 +45,6 @@ export default function ServiceSearch() {
     };
   }, []);
 
-  // Typing animation
   useEffect(() => {
     if (isFocused || isManualMode || prefersReducedMotion) {
       return;
@@ -98,7 +96,6 @@ export default function ServiceSearch() {
     };
   }, [query, animationPhase, isFocused, isManualMode, prefersReducedMotion]);
 
-  // Search results
   const results = useMemo(() => {
     const normalizedQuery = normalizeText(query.trim());
 
@@ -117,7 +114,6 @@ export default function ServiceSearch() {
     });
   }, [query]);
 
-  // Resume animation when the user leaves the search field
   function handleBlur() {
     setIsFocused(false);
 
@@ -147,7 +143,6 @@ export default function ServiceSearch() {
     setIsManualMode(true);
   }
 
-  // Cleanup
   useEffect(() => {
     return () => {
       if (animationTimeoutRef.current !== null) {
@@ -163,7 +158,6 @@ export default function ServiceSearch() {
   const shouldShowResults =
     query.trim().length > 0 && (isManualMode || animationPhase === "showing");
 
-  // Connect the search bar and results visually
   const hasVisibleResults = shouldShowResults;
 
   return (
@@ -213,7 +207,7 @@ export default function ServiceSearch() {
               <Link
                 key={service.id}
                 to={service.href}
-                className="group flex items-center justify-between gap-4 border-b border-zinc-100 p-4 transition-colors last:border-b-0 hover:bg-primary-light/40 focus-visible:bg-primary-light/40 focus-visible:outline-2 focus-visible:outline-primary"
+                className="group flex items-center justify-between gap-4 border-b border-zinc-100 py-4 pr-4 pl-4 transition-colors last:border-b-0 hover:bg-primary-light/40 focus-visible:bg-primary-light/40 focus-visible:outline-2 focus-visible:outline-primary"
               >
                 <div className="min-w-0">
                   <h3 className="text-sm font-semibold text-zinc-900">
@@ -225,12 +219,14 @@ export default function ServiceSearch() {
                   </p>
                 </div>
 
-                <ArrowRight
-                  size={19}
-                  strokeWidth={1.8}
-                  className="shrink-0 text-primary"
-                  aria-hidden="true"
-                />
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center">
+                  <ArrowRight
+                    size={19}
+                    strokeWidth={1.8}
+                    className="text-primary"
+                    aria-hidden="true"
+                  />
+                </span>
               </Link>
             ))}
           </div>

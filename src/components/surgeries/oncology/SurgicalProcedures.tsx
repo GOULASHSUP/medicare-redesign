@@ -14,7 +14,7 @@ const procedures = [
 export default function SurgicalProcedures() {
   return (
     <section
-      className="bg-white py-16 sm:py-20"
+      className="section-spacing bg-white"
       aria-labelledby="surgical-procedures-heading"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

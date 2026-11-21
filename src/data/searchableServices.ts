@@ -7,8 +7,6 @@ export interface SearchableService {
   href: string;
   keywords: string[];
 }
-
-// Featured services with custom descriptions and search keywords
 const featuredServices: SearchableService[] = [
   {
     id: "alex-multiplex",
@@ -85,7 +83,6 @@ const featuredServices: SearchableService[] = [
   },
 ];
 
-// Convert navigation items and nested dropdown entries into search results
 function getNavigationServices(
   items: NavigationItem[],
   parentLabel?: string,
@@ -115,7 +112,6 @@ function getNavigationServices(
 
 const navigationServices = getNavigationServices(navigationItems);
 
-// Combine featured services and navigation entries, removing duplicate titles
 const uniqueServices = new Map<string, SearchableService>();
 
 for (const service of [...featuredServices, ...navigationServices]) {
@@ -128,10 +124,10 @@ for (const service of [...featuredServices, ...navigationServices]) {
 
 export const searchableServices = Array.from(uniqueServices.values());
 
-// Animated example searches remain unchanged
+// Animated example searches
 export const exampleSearches = [
   "Allergiavizsgálat",
-  "Műtétek",
+  "Daganatsebészeti műtétek",
   "Ételintolerancia",
   "Telemedicina",
   "Állapotfelmérés",

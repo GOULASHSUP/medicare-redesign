@@ -3,6 +3,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import EmergencyNotice from "../components/layout/EmergencyNotice";
 import ScrollToTop from "../components/layout/ScrollToTop";
+import AccessibilityButton from "../components/layout/AccessibilityButton";
 
 export default function MainLayout() {
   return (
@@ -18,6 +19,8 @@ export default function MainLayout() {
       </main>
 
       <Footer />
+
+      <AccessibilityButton />
     </div>
   );
 }
