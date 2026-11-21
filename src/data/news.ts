@@ -1,6 +1,6 @@
 import maternityImage from "../assets/images/news/szuleszeti-nyilt-nap.webp";
 import offersImage from "../assets/images/news/aktualis-ajanlatok.webp";
-import healthAdviceImage from "../assets/images/news/egeszsegugyi-tanacsok.webp";
+import healthAdviceImage from "../assets/images/news/egeszsegugyi-tanacsok.jpg";
 
 export interface NewsItem {
   id: string;

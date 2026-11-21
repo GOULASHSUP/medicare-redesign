@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import NewsletterForm from "./NewsletterForm";
+import medicareLogo from "../../assets/images/logos/medicare-logo.svg";
 
 const usefulLinks = [
   { label: "Műtétek", href: "/mutetek" },
@@ -47,10 +48,15 @@ export default function Footer() {
           <div>
             <Link
               to="/"
-              className="inline-block text-3xl font-bold tracking-tight text-primary"
+              className="inline-flex items-center transition-opacity hover:opacity-80"
               aria-label="Medicare – Főoldal"
             >
-              Medicare
+              <img
+                src={medicareLogo}
+                alt="Medicare"
+                className="h-10 w-auto"
+                loading="lazy"
+              />
             </Link>
 
             <div className="mt-8 flex flex-col gap-5">

@@ -3,6 +3,7 @@ import { CalendarDays, CircleAlert, Phone, Mail } from "lucide-react";
 import MobileNavigation from "./MobileNavigation";
 import NavDropdown from "./NavDropdown";
 import { navigationItems } from "../../data/navigation";
+import medicareLogo from "../../assets/images/logos/medicare-logo.svg";
 
 export default function Header() {
   const phoneNumber = "+36 1 465 3131";
@@ -57,7 +58,6 @@ export default function Header() {
 
           {/* Mobile and Tablet Top Bar - Contact Information Only */}
           <div className="flex min-h-8 flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white xl:hidden">
-            {/* Phone Number */}
             <a
               href={`tel:${phoneHref}`}
               className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
@@ -66,7 +66,6 @@ export default function Header() {
               {phoneNumber}
             </a>
 
-            {/* Email Address */}
             <a
               href={`mailto:${emailAddress}`}
               className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
@@ -81,21 +80,25 @@ export default function Header() {
       {/* Main Navigation Bar - Sticky */}
       <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-zinc-50">
         <div className="mx-auto flex min-h-15 max-w-7xl items-center justify-between gap-5 px-6 lg:px-8 xl:min-h-20">
-          {" "}
           {/* Medicare Logo */}
           <Link
             to="/"
-            className="shrink-0 text-3xl font-bold tracking-tight text-primary"
+            className="flex shrink-0 items-center transition-opacity hover:opacity-80"
             aria-label="Medicare főoldal"
           >
-            Medicare
+            <img
+              src={medicareLogo}
+              alt="Medicare"
+              className="h-5 w-auto sm:h-6 xl:h-7"
+            />
           </Link>
+
           {/* Desktop Navigation */}
           <nav
-            className="hidden h-20 min-w-0 items-center xl:flex"
+            className="ml-auto hidden h-20 min-w-0 items-center justify-end xl:flex"
             aria-label="Fő navigáció"
           >
-            <div className="flex h-full items-center">
+            <div className="flex h-full items-center justify-end">
               {navigationItems.map((item) =>
                 item.children?.length ? (
                   <NavDropdown key={item.label} item={item} />
@@ -118,6 +121,7 @@ export default function Header() {
               )}
             </div>
           </nav>
+
           {/* Mobile Navigation */}
           <MobileNavigation />
         </div>

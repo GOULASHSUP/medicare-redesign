@@ -1,6 +1,6 @@
 import hospitalInterior from "../assets/images/hospital/varo.webp";
 import surgicalCare from "../assets/images/hospital/mutet-medicarekorhaz.webp";
-import diagnostics from "../assets/images/hospital/diagnosztika.webp";
+import diagnostics from "../assets/images/hospital/diagnosztika.jpg";
 
 export interface HospitalShowcaseSlide {
   id: string;

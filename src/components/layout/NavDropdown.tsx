@@ -133,7 +133,9 @@ export default function NavDropdown({ item }: NavDropdownProps) {
   };
 
   const mainLinkClassName = (open: boolean) =>
-    `flex h-full items-center gap-2 px-3 text-sm font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary ${
+    `flex h-full items-center gap-2 whitespace-nowrap pl-3 ${
+      item.label === "Webshop" ? "pr-0" : "pr-3"
+    } text-sm font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary ${
       open ? "text-primary" : "text-zinc-800 hover:text-primary"
     }`;
 
