@@ -115,7 +115,6 @@ function getNavigationServices(
 
 const navigationServices = getNavigationServices(navigationItems);
 
-// Combine featured services and navigation entries, removing duplicate titles
 const uniqueServices = new Map<string, SearchableService>();
 
 for (const service of [...featuredServices, ...navigationServices]) {
@@ -128,10 +127,10 @@ for (const service of [...featuredServices, ...navigationServices]) {
 
 export const searchableServices = Array.from(uniqueServices.values());
 
-// Animated example searches remain unchanged
+// Animated example searches
 export const exampleSearches = [
   "Allergiavizsgálat",
-  "Műtétek",
+  "Daganatsebészeti műtétek",
   "Ételintolerancia",
   "Telemedicina",
   "Állapotfelmérés",

@@ -98,7 +98,6 @@ export default function ServiceSearch() {
     };
   }, [query, animationPhase, isFocused, isManualMode, prefersReducedMotion]);
 
-  // Search results
   const results = useMemo(() => {
     const normalizedQuery = normalizeText(query.trim());
 
@@ -147,7 +146,6 @@ export default function ServiceSearch() {
     setIsManualMode(true);
   }
 
-  // Cleanup
   useEffect(() => {
     return () => {
       if (animationTimeoutRef.current !== null) {
@@ -163,7 +161,6 @@ export default function ServiceSearch() {
   const shouldShowResults =
     query.trim().length > 0 && (isManualMode || animationPhase === "showing");
 
-  // Connect the search bar and results visually
   const hasVisibleResults = shouldShowResults;
 
   return (
