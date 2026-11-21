@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Link } from "react-router";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import type { NavigationItem } from "../../data/navigation";
@@ -42,12 +42,61 @@ export default function NavDropdown({ item }: NavDropdownProps) {
   const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const openTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const menuId = useId();
 
-  const closeMenu = () => {
+  const clearTimers = useCallback(() => {
+    if (openTimeoutRef.current !== null) {
+      clearTimeout(openTimeoutRef.current);
+      openTimeoutRef.current = null;
+    }
+
+    if (closeTimeoutRef.current !== null) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    clearTimers();
     setIsOpen(false);
     setActiveSubmenu(null);
+  }, [clearTimers]);
+
+  const scheduleOpen = () => {
+    clearTimers();
+
+    if (isOpen) return;
+
+    openTimeoutRef.current = setTimeout(() => {
+      setIsOpen(true);
+      openTimeoutRef.current = null;
+    }, 100);
   };
+
+  const scheduleClose = () => {
+    clearTimers();
+
+    closeTimeoutRef.current = setTimeout(() => {
+      setIsOpen(false);
+      setActiveSubmenu(null);
+      closeTimeoutRef.current = null;
+    }, 100);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (openTimeoutRef.current !== null) {
+        clearTimeout(openTimeoutRef.current);
+      }
+
+      if (closeTimeoutRef.current !== null) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -75,15 +124,16 @@ export default function NavDropdown({ item }: NavDropdownProps) {
       document.removeEventListener("pointerdown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isOpen]);
+  }, [isOpen, closeMenu]);
 
   const toggleMenu = () => {
+    clearTimers();
     setIsOpen((previous) => !previous);
     setActiveSubmenu(null);
   };
 
   const mainLinkClassName = (open: boolean) =>
-    `flex h-full items-center gap-2 px-3 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary ${
+    `flex h-full items-center gap-2 px-3 text-sm font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary ${
       open ? "text-primary" : "text-zinc-800 hover:text-primary"
     }`;
 
@@ -91,8 +141,8 @@ export default function NavDropdown({ item }: NavDropdownProps) {
     <div
       ref={containerRef}
       className="relative flex h-full items-center"
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={closeMenu}
+      onMouseEnter={scheduleOpen}
+      onMouseLeave={scheduleClose}
       onBlur={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) {
           closeMenu();
@@ -111,7 +161,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
           <ChevronDown
             size={15}
             strokeWidth={1.8}
-            className={`shrink-0 transition-transform duration-200 ${
+            className={`shrink-0 transition-transform duration-300 ${
               isOpen ? "rotate-180" : ""
             }`}
           />
@@ -129,7 +179,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
           <ChevronDown
             size={15}
             strokeWidth={1.8}
-            className={`shrink-0 transition-transform duration-200 ${
+            className={`shrink-0 transition-transform duration-300 ${
               isOpen ? "rotate-180" : ""
             }`}
           />
@@ -140,7 +190,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
       {isOpen && (
         <div
           id={menuId}
-          className="absolute top-full left-0 z-50 w-80 rounded-b-xl border border-zinc-200 bg-zinc-50 p-2 shadow-xl"
+          className="absolute top-full left-0 z-50 w-80 animate-fade-in rounded-b-xl border border-zinc-200 bg-zinc-50 p-2 shadow-xl"
         >
           <div className="max-h-[70vh] overflow-y-auto">
             {item.children?.map((child, index) => {
