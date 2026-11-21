@@ -20,6 +20,24 @@ export default function HospitalShowcaseSection() {
     );
   }
 
+  function renderTitle(title: string) {
+    const highlightedText = "ahol Ön az első";
+
+    if (!title.includes(highlightedText)) {
+      return title;
+    }
+
+    const [before, after] = title.split(highlightedText);
+
+    return (
+      <>
+        {before}
+        <span className="text-primary">{highlightedText}</span>
+        {after}
+      </>
+    );
+  }
+
   return (
     <section
       className="bg-white pt-10 pb-10 lg:pt-12 lg:pb-12"
@@ -52,7 +70,7 @@ export default function HospitalShowcaseSection() {
             </span>
 
             <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-4xl">
-              {activeSlide.title}
+              {renderTitle(activeSlide.title)}
             </h2>
 
             <div className="mt-6 space-y-4">
