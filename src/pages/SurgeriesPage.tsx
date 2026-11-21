@@ -1,4 +1,5 @@
 import PageHero from "../components/layout/PageHero";
+import PromoBanner from "../components/common/PromoBanner";
 import heroImage from "../assets/images/surgeries/surgeries-hero.jpg";
 
 export default function SurgeriesPage() {
@@ -24,6 +25,18 @@ export default function SurgeriesPage() {
           },
         ]}
       />
+
+      {/* Discount Promotion */}
+      <section
+        className="mx-auto max-w-7xl px-6 py-12 lg:px-8"
+        aria-label="Medicare kedvezmények"
+      >
+        <PromoBanner
+          title="Medicare Egészségpénztáron keresztül szolgáltatásaink akár 20% adó-, és további 10% egyedi kedvezménnyel vehetők igénybe!"
+          buttonLabel="Részletek"
+          href="/medicare-egeszsegpenztar"
+        />
+      </section>
     </>
   );
 }
