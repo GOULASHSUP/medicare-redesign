@@ -1,5 +1,6 @@
 import PageHero from "../components/layout/PageHero";
 import PromoBanner from "../components/common/PromoBanner";
+import SurgicalSpecialties from "../components/surgeries/SurgicalSpecialties";
 import heroImage from "../assets/images/surgeries/surgeries-hero.jpg";
 
 export default function SurgeriesPage() {
@@ -28,7 +29,7 @@ export default function SurgeriesPage() {
 
       {/* Discount Promotion */}
       <section
-        className="mx-auto max-w-7xl px-6 py-12 lg:px-8"
+        className="mx-auto max-w-7xl px-6 pt-12 pb-4 lg:px-8"
         aria-label="Medicare kedvezmények"
       >
         <PromoBanner
@@ -37,6 +38,9 @@ export default function SurgeriesPage() {
           href="/medicare-egeszsegpenztar"
         />
       </section>
+
+      {/* Surgical Specialties */}
+      <SurgicalSpecialties />
     </>
   );
 }
