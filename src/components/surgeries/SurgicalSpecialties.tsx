@@ -15,12 +15,13 @@ export default function SurgicalSpecialties() {
             id="surgeries-list-heading"
             className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl"
           >
-            Műtéti szakterületeink
+            Műtéti <span className="text-primary">szakterületeink</span>
           </h2>
 
           <p className="mt-4 text-base leading-relaxed text-zinc-600 sm:text-lg">
-            Ismerje meg műtéti szolgáltatásainkat, és válassza ki az Ön számára
-            megfelelő szakterületet.
+            A Medicare Kórházban korszerű technológiával és magas színvonalú
+            ellátással gondoskodunk pácienseink gyógyulásáról és kényelméről.
+            Ismerje meg műtéti szakterületeinket!
           </p>
         </div>
 

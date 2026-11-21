@@ -80,7 +80,8 @@ export default function Header() {
 
       {/* Main Navigation Bar - Sticky */}
       <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-zinc-50">
-        <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-5 px-6 lg:px-8">
+        <div className="mx-auto flex min-h-15 max-w-7xl items-center justify-between gap-5 px-6 lg:px-8 xl:min-h-20">
+          {" "}
           {/* Medicare Logo */}
           <Link
             to="/"
@@ -89,7 +90,6 @@ export default function Header() {
           >
             Medicare
           </Link>
-
           {/* Desktop Navigation */}
           <nav
             className="hidden h-20 min-w-0 items-center xl:flex"
@@ -103,7 +103,7 @@ export default function Header() {
                   <Link
                     key={item.label}
                     to={item.href}
-                    className="flex h-full items-center px-3 text-sm font-medium text-zinc-800 transition-colors hover:bg-primary-light hover:text-primary"
+                    className="flex h-full items-center px-3 text-sm font-medium text-zinc-800 transition-colors hover:text-primary"
                   >
                     {item.label}
                   </Link>
@@ -118,7 +118,6 @@ export default function Header() {
               )}
             </div>
           </nav>
-
           {/* Mobile Navigation */}
           <MobileNavigation />
         </div>

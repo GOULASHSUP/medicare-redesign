@@ -9,7 +9,7 @@ export default function EmergencyNotice() {
     <div className="pointer-events-none fixed right-0 bottom-6 z-40 w-fit">
       {/* Expanded Badge */}
       <div
-        className={`pointer-events-auto relative flex min-h-12 w-max max-w-[calc(100vw-3rem)] items-center gap-3 rounded-l-full border border-primary/30 bg-primary py-3 pr-5 pl-4 text-white shadow-xl transition-transform duration-300 ease-in-out motion-reduce:transition-none sm:min-h-14 sm:gap-5 sm:py-4 sm:pr-7 sm:pl-5 ${
+        className={`pointer-events-auto relative flex min-h-12 w-max max-w-[calc(100vw-6.25rem)] items-center gap-2 rounded-l-full border border-primary/30 bg-primary py-3 pr-4 pl-3 text-white shadow-xl transition-transform duration-300 ease-in-out motion-reduce:transition-none sm:min-h-14 sm:max-w-[calc(100vw-3rem)] sm:gap-5 sm:py-4 sm:pr-7 sm:pl-5 ${
           isOpen ? "translate-x-0" : "translate-x-[calc(100%+1px)]"
         }`}
       >

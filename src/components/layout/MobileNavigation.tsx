@@ -198,7 +198,7 @@ export default function MobileNavigation() {
         <nav
           id="mobile-navigation"
           aria-label="Mobil navigáció"
-          className="absolute top-full right-0 left-0 z-50 max-h-[calc(100dvh-5.5rem)] overflow-y-auto overscroll-contain border-t border-zinc-200 bg-zinc-50 shadow-xl"
+          className="absolute top-full right-0 left-0 z-50 max-h-[calc(100dvh-3.75rem)] overflow-y-auto overscroll-contain border-t border-zinc-200 bg-zinc-50 shadow-xl"
         >
           <div className="mx-auto max-w-7xl px-4 py-5">
             {/* Homepage Link */}

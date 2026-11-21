@@ -83,10 +83,8 @@ export default function NavDropdown({ item }: NavDropdownProps) {
   };
 
   const mainLinkClassName = (open: boolean) =>
-    `flex h-full items-center gap-2 px-3 text-sm font-medium text-zinc-800 transition-colors focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary ${
-      open
-        ? "bg-primary-light text-primary"
-        : "hover:bg-primary-light hover:text-primary"
+    `flex h-full items-center gap-2 px-3 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary ${
+      open ? "text-primary" : "text-zinc-800 hover:text-primary"
     }`;
 
   return (
