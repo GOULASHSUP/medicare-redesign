@@ -7,8 +7,6 @@ export interface SearchableService {
   href: string;
   keywords: string[];
 }
-
-// Featured services with custom descriptions and search keywords
 const featuredServices: SearchableService[] = [
   {
     id: "alex-multiplex",
@@ -85,7 +83,6 @@ const featuredServices: SearchableService[] = [
   },
 ];
 
-// Convert navigation items and nested dropdown entries into search results
 function getNavigationServices(
   items: NavigationItem[],
   parentLabel?: string,

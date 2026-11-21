@@ -11,7 +11,7 @@ export default function OncologyFaqSection() {
 
   return (
     <section
-      className="bg-[#f8fafc] py-16 sm:py-20"
+      className="section-spacing bg-[#f8fafc]"
       aria-labelledby="oncology-faq-heading"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

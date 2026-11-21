@@ -21,9 +21,17 @@ export default function HospitalShowcaseSection() {
   }
 
   function renderTitle(title: string) {
-    const highlightedText = "ahol Ön az első";
+    const highlightedTexts = [
+      "ahol Ön az első",
+      "gondoskodó környezetben",
+      "személyre szabott ellátás",
+    ];
 
-    if (!title.includes(highlightedText)) {
+    const highlightedText = highlightedTexts.find((text) =>
+      title.includes(text),
+    );
+
+    if (!highlightedText) {
       return title;
     }
 
@@ -40,7 +48,7 @@ export default function HospitalShowcaseSection() {
 
   return (
     <section
-      className="bg-white pt-10 pb-10 lg:pt-12 lg:pb-12"
+      className="section-spacing bg-white"
       aria-label="Medicare Magánkórház és műtéti ellátás"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

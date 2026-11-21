@@ -1,14 +1,24 @@
 import { Link } from "react-router";
 import { ArrowUpRight } from "lucide-react";
 import { surgeries } from "../../data/surgeries";
+import PromoBanner from "../common/PromoBanner";
 
 export default function SurgicalSpecialties() {
   return (
     <section
-      className="bg-white pt-8 pb-16 sm:pt-10 sm:pb-20"
+      className="section-spacing bg-white"
       aria-labelledby="surgeries-list-heading"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Discount Promotion */}
+        <div className="mb-8 sm:mb-10">
+          <PromoBanner
+            title="Medicare Egészségpénztáron keresztül szolgáltatásaink akár 20% adó-, és további 10% egyedi kedvezménnyel vehetők igénybe!"
+            buttonLabel="Részletek"
+            href="/medicare-egeszsegpenztar"
+          />
+        </div>
+
         {/* Section Heading */}
         <div className="mb-10 max-w-2xl">
           <h2

@@ -140,13 +140,11 @@ export default function MobileNavigation() {
   const location = useLocation();
   const toggleRef = useRef<HTMLButtonElement>(null);
 
-  // Close mobile navigation when the route changes
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsOpen(false);
   }, [location.pathname]);
 
-  // Prevent background scrolling while the mobile menu is open
   useEffect(() => {
     if (!isOpen) return;
 
@@ -158,7 +156,6 @@ export default function MobileNavigation() {
     };
   }, [isOpen]);
 
-  // Close mobile navigation with Escape
   useEffect(() => {
     if (!isOpen) return;
 

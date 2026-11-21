@@ -68,7 +68,7 @@ export default function NewsSection() {
 
   return (
     <section
-      className="bg-linear-to-br from-white via-[#f0f6fc] to-white pt-8 pb-20 lg:pt-10 lg:pb-28"
+      className="section-spacing bg-linear-to-br from-white via-[#f0f6fc] to-white"
       aria-labelledby="news-heading"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

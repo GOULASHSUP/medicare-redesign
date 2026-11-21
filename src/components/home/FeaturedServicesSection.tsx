@@ -58,7 +58,7 @@ const featuredServices = [
 export default function FeaturedServicesSection() {
   return (
     <section
-      className="bg-white py-20 lg:py-24"
+      className="section-spacing bg-white"
       aria-labelledby="featured-services-heading"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

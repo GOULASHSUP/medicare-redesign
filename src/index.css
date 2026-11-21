@@ -1,13 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* Medicare brand colours */
   --color-primary: #0c55a2;
   --color-primary-hover: #094583;
   --color-primary-light: #eaf2fa;
 
-  /* Animations */
   --animate-fade-in: fadeIn 400ms ease-out;
+}
+
+@utility section-spacing {
+  padding-block: 3rem;
+
+  @media (min-width: 640px) {
+    padding-block: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-block: 5rem;
+  }
 }
 
 @keyframes fadeIn {

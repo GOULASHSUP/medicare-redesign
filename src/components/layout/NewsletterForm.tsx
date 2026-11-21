@@ -65,8 +65,7 @@ export default function NewsletterForm() {
       </div>
 
       {/* Newsletter Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-        {/* Heading */}
+      <div className="section-spacing relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary shadow-sm">
             <Mail size={24} strokeWidth={1.7} aria-hidden="true" />
