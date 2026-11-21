@@ -1,5 +1,7 @@
 import PageHero from "../components/layout/PageHero";
-import SurgicalProcedures from "../components/surgeries/SurgicalProcedures";
+import SurgicalProcedures from "../components/surgeries/oncology/SurgicalProcedures";
+import OncologyAboutSection from "../components/surgeries/oncology/OncologyAboutSection";
+import OncologyDoctorsSection from "../components/surgeries/oncology/OncologyDoctorsSection";
 import heroImage from "../assets/images/surgeries/daganatsebeszet.jpg";
 
 export default function OncologySurgeriesPage() {
@@ -32,6 +34,12 @@ export default function OncologySurgeriesPage() {
 
       {/* Surgical Procedures */}
       <SurgicalProcedures />
+
+      {/* About Oncology Surgery */}
+      <OncologyAboutSection />
+
+      {/* Oncology Doctors */}
+      <OncologyDoctorsSection />
     </>
   );
 }
