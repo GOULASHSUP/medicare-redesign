@@ -1,6 +1,7 @@
 import PageHero from "../components/layout/PageHero";
 import PromoBanner from "../components/common/PromoBanner";
 import SurgicalSpecialties from "../components/surgeries/SurgicalSpecialties";
+import HospitalStaySection from "../components/surgeries/HospitalStaySection";
 import heroImage from "../assets/images/surgeries/surgeries-hero.jpg";
 
 export default function SurgeriesPage() {
@@ -41,6 +42,9 @@ export default function SurgeriesPage() {
 
       {/* Surgical Specialties */}
       <SurgicalSpecialties />
+
+      {/* Hospital Stay */}
+      <HospitalStaySection />
     </>
   );
 }
